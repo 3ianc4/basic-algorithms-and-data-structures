@@ -5,7 +5,7 @@ def merge_sort array
     if array.size <= 1
         return array
     else
-        mid = rray.size/2
+        mid = array.size/2
         left = merge_sort(array[0...mid])
         right = merge_sort(array[mid..array.size])
         merge(left, right)
