@@ -23,7 +23,6 @@ def merge left, right
         return [right.first] + merge(left, right[1..right.size])
     end
 end
-p merge_sort([5, 2, 1 , 3])
 
 assert_equal merge_sort([1, 1, 1, 1, 1, 1, 1]), [1, 1, 1, 1, 1, 1, 1]
 assert_equal merge_sort([1, 2, 3, 4, 5, 6, 7]), [1, 2, 3, 4, 5, 6, 7]
