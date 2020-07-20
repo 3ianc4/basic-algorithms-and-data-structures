@@ -1,16 +1,21 @@
-# This repository contains basic algorithms built with ruby.
+# This repository contains some algorithms and data structures built with ruby and C.
 
 ## Sorting algorithms
 
-* [Selection sort](https://github.com/biancaguzenski/basic-algorithms/blob/master/selection_sort.rb)
-* [Insertion sort](https://github.com/biancaguzenski/basic-algorithms/blob/master/insertion_sort.rb)
-* [Merge sort](https://github.com/biancaguzenski/basic-algorithms/blob/master/merge_sort.rb)
-* [Quick sort](https://github.com/biancaguzenski/basic-algorithms/blob/master/quick_sort.rb)
+* [Selection sort - Ruby](https://github.com/biancaguzenski/basic-algorithms/blob/master/selection_sort.rb)
+* [Insertion sort - Ruby](https://github.com/biancaguzenski/basic-algorithms/blob/master/insertion_sort.rb)
+* [Merge sort - Ruby](https://github.com/biancaguzenski/basic-algorithms/blob/master/merge_sort.rb)
+* [Quick sort - Ruby](https://github.com/biancaguzenski/basic-algorithms/blob/master/quick_sort.rb)
 
 ## Searching algorithms
-* [Binary search](https://github.com/biancaguzenski/basic-algorithms/blob/master/binary_search.rb)
+
+* [Binary search - Ruby](https://github.com/biancaguzenski/basic-algorithms/blob/master/binary_search.rb)
+
+## Data Structures
+
+* Linked List - C
 
 ## Other algorithms
 
-* [Palindromes](https://github.com/biancaguzenski/basic-algorithms/blob/master/is_palindrome.rb)
-* [Recursive - Palindromes](https://github.com/biancaguzenski/basic-algorithms/blob/master/is_palindrome_recursive.rb)
+* [Palindromes - Ruby](https://github.com/biancaguzenski/basic-algorithms/blob/master/is_palindrome.rb)
+* [Recursive - Palindromes - Ruby ](https://github.com/biancaguzenski/basic-algorithms/blob/master/is_palindrome_recursive.rb)
