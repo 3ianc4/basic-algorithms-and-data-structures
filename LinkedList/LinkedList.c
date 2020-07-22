@@ -1,33 +1,54 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// First we create a structure to represent the node type that has a data and a link to next node
 struct Node {
     int data;
-    struct Node *link;
+    struct Node *next;
 };
 
-// We need to store the head node - it points to null while it is and empty linked list
-struct Node *headNode;
+struct Node *head;
 
-// this function insert elements in the list
 
 void insertElementBeggining(int x){
-    // temp is a variable that stores the adress memory which malloc() takes
-    struct Node* temp = (struct Node*)malloc(sizeof(struct Node));
-    temp->data = x; // temp node receive x as value
-    temp->link = NULL; // temp node receive null as link
-    if(headNode != NULL){ // if headNode is linked to an element
-        temp->link = headNode; // temp node link is now headnode
-        headNode = temp; // and the headnode is now temp
+    
+    struct Node *temp = (struct Node *)malloc(sizeof(struct Node));
+    temp->data = x;
+    temp->next = head;
+    head = temp;
+}
+
+struct Node insertElementEnd(int x){
+    
+    struct Node *temp = head;
+    struct Node *temp1 = (struct Node *)malloc(sizeof(struct Node));
+    temp1->data = x;
+    temp1->next = NULL;
+    
+    while (temp->next != NULL){
+        temp = temp->next;
     }
+    temp->next = temp1;
+    return struct Node head;
+}
+
+void deleteElement(){
+
+}
+
+void insertElementEnd(){
+
 }
 
 void printList(){
-    insertElementBeggining(10);
-    printf("headnode: %d", headNode->data);
+    struct Node *temp = head; // local variable = because we dont want to modify headnode
+    printf("List: ");
+    while (temp != NULL) {
+        printf("%d, ", temp->data);
+        temp = temp->next;
+    }
 }
 
 int main(){
-    printList();
+    head = NULL;
+
 }
