@@ -40,7 +40,7 @@ void insertElementEnd(){
 }
 
 void printList(){
-    struct Node *temp = head; // local variable = because we dont want to modify headnode
+    struct Node *temp = head;
     printf("List: ");
     while (temp != NULL) {
         printf("%d, ", temp->data);
@@ -52,20 +52,3 @@ int main(){
     head = NULL;
 
 }
-
-printf("How many numbers in this list?\n");
-    int n, x, i, m;
-    scanf("%d", &n);
-    
-    for (i = 0; i < n; i++){
-        printf("Enter a value to put at the end; ");
-        scanf("%d", &m);
-        insertElementEnd(m);
-        printList();
-    }
-//for (i = 0; i < n; i++){
-    //    printf("Enter value: ");
-    //    scanf("%d", &x);
-    //    insertElementBeggining(x);
-    //    printList();
-    //}
