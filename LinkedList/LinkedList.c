@@ -9,7 +9,7 @@ struct Node {
 
 struct Node *head;
 
-void insertElementBeggining(int x){
+void insertBeggining(int x){
 
     struct Node *temp = (struct Node *)malloc(sizeof(struct Node));
     temp->data = x;
@@ -17,7 +17,7 @@ void insertElementBeggining(int x){
     head = temp;
 }
 
-void insertElementEnd(int x){ 
+void insertEnd(int x){ 
 
     struct Node *temp = head; 
     struct Node *temp1 = (struct Node *)malloc(sizeof(struct Node));
@@ -31,7 +31,7 @@ void insertElementEnd(int x){
     temp->next = temp1; 
 }
 
-void InsertNthPosition(int x, int n){
+void insertNthPosition(int x, int n){
     
     struct Node *temp1 = head; 
     struct Node *temp = (struct Node *)malloc(sizeof(struct Node));
@@ -51,12 +51,31 @@ void InsertNthPosition(int x, int n){
 void deleteElement(int n){
     
     struct Node *temp = head;
+
+    if(n==0){
+        head = temp->next;
+        free(temp);
+        return;
+    }
     int count = 0;
     while(count < n-1){
         temp = temp->next;
+        count++;
     }
-    temp->next = temp->next->next;
+    struct Node *temp2 = temp->next;
+    temp->next = temp2->next;
+    free(temp2);
         
+}
+
+int listSize(){
+    struct Node *temp = head;
+    int counter = 0;
+    while(temp != NULL){
+        temp = temp->next;
+        counter++;
+    }
+    printf("List size: %d", counter);
 }
 
 void printList(){
@@ -74,12 +93,13 @@ int main(){
     
     head = NULL;
     
-    insertElementBeggining(3);
-    InsertNthPosition(2, 1);
-    insertElementEnd(4);
-    InsertNthPosition(7, 1);
+    insertBeggining(3);
+    insertNthPosition(2, 1);
+    insertNthPosition(4, 2);
+    insertNthPosition(7, 1);
     printList();
     deleteElement(2);
     printList();
+    listSize();
 
 }
