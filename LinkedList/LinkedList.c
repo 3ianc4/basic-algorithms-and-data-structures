@@ -2,85 +2,84 @@
 #include <stdlib.h>
 
 struct Node {
+
     int data;
     struct Node *next;
 };
 
 struct Node *head;
 
-
 void insertElementBeggining(int x){
-    
+
     struct Node *temp = (struct Node *)malloc(sizeof(struct Node));
     temp->data = x;
     temp->next = head;
     head = temp;
 }
 
-struct Node insertElementEnd(int x){
-    
-    struct Node *temp = head;
+void insertElementEnd(int x){ 
+
+    struct Node *temp = head; 
     struct Node *temp1 = (struct Node *)malloc(sizeof(struct Node));
     temp1->data = x;
     temp1->next = NULL;
     
     while (temp->next != NULL){
-        temp = temp->next;
+        temp = temp->next; 
     }
-    temp->next = temp1;
-    return struct Node head;
+    
+    temp->next = temp1; 
 }
 
 void InsertNthPosition(int x, int n){
-    struct Node *temp1 = head;
+    
+    struct Node *temp1 = head; 
     struct Node *temp = (struct Node *)malloc(sizeof(struct Node));
     temp->data = x;
-    temp1->next = NULL;
+    temp->next = NULL;
 
-    int count = 0;
+    int count = 0; 
     while(count < n-1){
         temp1 = temp1->next;
         count++;
     }
+    
     temp->next = temp1->next;
     temp1->next = temp;
 }
 
-void deleteElement(){
-
-}
-
-void insertElementEnd(){
-
+void deleteElement(int n){
+    
+    struct Node *temp = head;
+    int count = 0;
+    while(count < n-1){
+        temp = temp->next;
+    }
+    temp->next = temp->next->next;
+        
 }
 
 void printList(){
+    
     struct Node *temp = head;
     printf("List: ");
+    
     while (temp != NULL) {
-        printf("%d, ", temp->data);
+        printf("[%d]", temp->data);
         temp = temp->next;
     }
 }
 
 int main(){
+    
     head = NULL;
+    
+    insertElementBeggining(3);
+    InsertNthPosition(2, 1);
+    insertElementEnd(4);
+    InsertNthPosition(7, 1);
+    printList();
+    deleteElement(2);
+    printList();
 
 }
-
-// printf("How many numbers in this list?\n");
-//     int n, x, i, m;
-//     scanf("%d", &n);
-//     
-//     for (i = 0; i < n; i++){
-//         printf("Enter a value to put at the end; ");
-//         scanf("%d", &m);
-//         insertElementEnd(m);
-//         printList();
-//     }
-//for (i = 0; i < n; i++){
-    //    printf("Enter value: ");
-    //    scanf("%d", &x);
-    //    insertElementBeggining(x);
-    //    printList();
-    //}
