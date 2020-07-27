@@ -118,6 +118,7 @@ int main(){
     insertNthPosition(2, 1);
     insertNthPosition(4, 2);
     insertNthPosition(7, 1);
+    insertNthPosition(7, 10);
     printList();
     deleteElement(2);
     printList();
