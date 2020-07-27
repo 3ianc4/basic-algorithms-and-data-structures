@@ -9,6 +9,16 @@ struct Node {
 
 struct Node *head;
 
+int listSize(){
+    struct Node *temp = head;
+    int counter = 0;
+    while(temp != NULL){
+        temp = temp->next;
+        counter++;
+    }
+    return counter;
+}
+
 void insertBeggining(int x){
 
     struct Node *temp = (struct Node *)malloc(sizeof(struct Node));
@@ -68,14 +78,25 @@ void deleteElement(int n){
         
 }
 
-int listSize(){
-    struct Node *temp = head;
-    int counter = 0;
-    while(temp != NULL){
-        temp = temp->next;
-        counter++;
+void reverse(){
+
+    int size = listSize();
+    if(size == 0){
+        return;
+    } else{
+        struct Node *current, *newNext, *next;
+        current = head;
+        newNext = NULL;
+        
+        while(current != NULL){
+            
+            next = current->next;
+            current->next = newNext;
+            newNext = current;
+            current = next;
+        } 
+        head = newNext;
     }
-    printf("List size: %d", counter);
 }
 
 void printList(){
@@ -101,5 +122,7 @@ int main(){
     deleteElement(2);
     printList();
     listSize();
+    reverse();
+    printList();
 
 }
