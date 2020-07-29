@@ -58,19 +58,31 @@ void printList(){
 
 }
 
-void delete(int n){
+void printReverse(){
 
-    if(n == 0){
+    struct Node *temp = head;
+    while(temp->next != NULL){
+        temp = temp->next;
+    }
+    printf("Reversed list: ");
+    while(temp != NULL){
+        printf("[%d] ", temp->data);
+        temp = temp->previous;
+    }
+}
+
+void delete(int x){
+
+    if(head->data == x){
         head = head->next;
         head->previous = NULL;
         return;
     }
 
     struct Node *temp = head;
-    int i = 0;
-    while(i < n){
+    
+    while(temp->data != x){
         temp = temp->next;
-        i++;
     }
     if(temp->next != NULL){
         temp->previous->next = temp->next;
@@ -89,8 +101,11 @@ int main(){
     insertHead(15);
     printList();
     insertTail(20);
+    insertTail(30);
+    insertTail(40);
     printList();
-    delete(2);
+    delete(20);
     printList();
+    printReverse();
 
 }
