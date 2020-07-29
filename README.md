@@ -13,7 +13,8 @@
 
 ## Data Structures
 
-* Linked List - C
+* [Linked List - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/LinkedList)
+* [Doubly Linked list - C]
 
 ## Other algorithms
 
