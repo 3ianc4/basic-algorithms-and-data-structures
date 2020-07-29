@@ -14,7 +14,8 @@
 ## Data Structures
 
 * [Linked List - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/LinkedList)
-* [Doubly Linked list - C]
+* [Doubly Linked list - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DoublyLinkedList)
+* [Stack - C]
 
 ## Other algorithms
 
