@@ -16,8 +16,6 @@ void isEmpty(){
 }
 
 void push(int x){
-    
-    isEmpty();
 
     struct Node *temp = (struct Node*)malloc(sizeof(struct Node));
     temp->data = x;
