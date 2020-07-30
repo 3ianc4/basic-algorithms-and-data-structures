@@ -15,8 +15,9 @@
 
 * [Linked List - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/LinkedList)
 * [Doubly Linked list - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DoublyLinkedList)
-* [Stack (array) - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Stack/stack.c)
-* [Stack (linked list) - C]
+* [Stack (Array/Linked list) - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Stack/stack.c)
+* [Queue]
+
 ## Other algorithms
 
 * [Palindromes - Ruby](https://github.com/biancaguzenski/basic-algorithms/blob/master/is_palindrome.rb)
