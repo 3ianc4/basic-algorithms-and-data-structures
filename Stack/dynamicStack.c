@@ -30,7 +30,9 @@ void topStack(){
 
 void pop(){
     isEmpty();
-    head = head->next;
+    struct Node *temp = head;
+    head = temp->next;
+    free(temp);
 }
 
 void print() { // FOR TESTING PURPOSE
