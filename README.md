@@ -17,7 +17,7 @@
 * [Doubly Linked list - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DoublyLinkedList)
 * [Stack - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/Stack)
 * [Queue - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/Queue)
-* [Tree - C]
+* [Tree - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/Tree)
 
 ## Other algorithms
 
