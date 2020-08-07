@@ -1,23 +1,32 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX 50
+#define max 50
 
-char string[MAX];
+char string[max];
 int top = -1;
 
-void push(char s){
+void Push(char s){
     top++;
     string[top] = s;
 
 }
 
-void pop(){
+void Pop(){
     top--;
 }
 
-void print(){
-    printf("%c", string[top]);
+void Print(){
+
+    printf("Reversed string: ");
+    int n = strlen(string);
+
+    for(int i = 0; i < n; i++){
+        printf("%c", string[top]);
+        Pop();
+    }
+
+    printf("\n");
 }
 
 int main(){
@@ -25,14 +34,12 @@ int main(){
     scanf("%s", string);
 
     int n = strlen(string);
+    
     for(int i = 0; i < n; i++){
-        push(string[i]);
+        Push(string[i]);
     }
 
-    for(int i = 0; i < n; i++){
-        print();
-        pop();
-    }
-    printf("\n");
+    Print();
+
     return 0;
 }

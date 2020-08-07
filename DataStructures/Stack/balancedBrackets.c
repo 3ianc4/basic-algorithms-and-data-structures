@@ -7,7 +7,7 @@
 int top = -1;
 char stack[size];
 
-void push(char x){
+void Push(char x){
     top++;
     stack[top] = x; 
 }
@@ -16,27 +16,39 @@ void pop(){
     top--;
 }
 
-void checkBalance(char *exp){
-    for(int i = 0; i < strlen(exp); i++){
-        if(exp[i]=='(' || exp[i]=='[' || exp[i]=='{') {
-            push(exp[i]);
-        }else if(exp[i]== ')'){
+void CheckBalance(char *expression){
+
+    for(int i = 0; i < strlen(expression); i++){
+
+        if( expression[i]=='(' || 
+            expression[i]=='[' || 
+            expression[i]=='{') 
+            {
+            
+            Push(expression[i]);
+
+        }else if(expression[i]== ')'){
+
             if(stack[top]== '('){
                 pop();
             } else{
-                continue;
+                top--;
             }
-        } else if(exp[i]== ']'){
+
+        } else if(expression[i]== ']'){
+
             if(stack[top]== '['){
                 pop();
-            } else{
-                continue;
+            }else{
+                top--;
             }
-        } else if(exp[i]== '}'){
+
+        } else if(expression[i]== '}'){
+            
             if(stack[top]== '{'){
                 pop();
-            } else{
-                continue;
+            }else{
+                top--;
             }
         }
     }
@@ -44,14 +56,14 @@ void checkBalance(char *exp){
 
 int main(){
 
-    char exp[20];
+    char expression[20];
     printf("Enter expression: \n");
-    scanf("%s", exp);
-    checkBalance(exp);
+    scanf("%s", expression);
+    CheckBalance(expression);
 
     if(top == -1){
         printf("Valid expression.");
-    }else{
+    } else {
         printf("Invalid expression.");
         return 0;
     }

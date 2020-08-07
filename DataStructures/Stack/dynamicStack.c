@@ -8,14 +8,15 @@ struct Node {
 
 struct Node *head = NULL; // empty stack
 
-void isEmpty(){
+void IsEmpty(){
+
     if(head == NULL){
-        printf("Stack is empty");
+        printf("Stack is empty.");
         return;
     }
 }
 
-void push(int x){
+void Push(int x){
 
     struct Node *temp = (struct Node*)malloc(sizeof(struct Node));
     temp->data = x;
@@ -23,19 +24,19 @@ void push(int x){
     head = temp;
 }
 
-void topStack(){
-    isEmpty();
-    printf("Top item in stack: %d", head->data);
+void TopOfStack(){
+    IsEmpty();
+    printf("\nTop item in stack: %d\n", head->data);
 }
 
-void pop(){
-    isEmpty();
+void Pop(){
+    IsEmpty();
     struct Node *temp = head;
     head = temp->next;
     free(temp);
 }
 
-void print() { // FOR TESTING PURPOSE
+void Print() { // FOR TESTING PURPOSE
 
     struct Node* temp = head;
 	printf("Stack: ");
@@ -47,11 +48,11 @@ void print() { // FOR TESTING PURPOSE
 
 int main(){
 
-    push(10);
-    push(5);
-    push(20);
-    push(21);
-    pop();
-    print();
-    topStack();
+    Push(10);
+    Push(5);
+    Push(20);
+    Push(21);
+    Pop();
+    Print();
+    TopOfStack();
 }
