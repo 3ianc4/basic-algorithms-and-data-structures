@@ -13,11 +13,11 @@
 
 ## Data Structures
 
-* [Linked List - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/LinkedList)
-* [Doubly Linked list - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DoublyLinkedList)
-* [Stack - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/Stack)
-* [Queue - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/Queue)
-* [Tree - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/Tree)
+* [Linked List - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DataStructures/LinkedList)
+* [Doubly Linked list - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DataStructures/DoublyLinkedList)
+* [Stack - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DataStructures/Stack)
+* [Queue - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DataStructures/Queue)
+* [Tree - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DataStructures/Tree)
 
 ## Other algorithms
 
