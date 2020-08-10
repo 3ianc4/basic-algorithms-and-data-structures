@@ -15,35 +15,32 @@ struct Node* GetNewNode(int data){
     return NewNode;
 }
 
-int FindMinimum(struct Node* root){ // to find minimum you have to go left until you find leaf node
-    if(root == NULL){
-        printf("Tree is empty");
-        return 0;
-    } else if(root->left == NULL){
-        return root->data;
+int FindHeight(struct Node* root){
+    if(root = NULL){
+        return -1;
     } else{
-        return FindMinimum(root->left);
-    }
-}
-
-int FindMaximum(struct Node* root){
-    if(root == NULL){
-        printf("Tree is empty");
-        return 0;
-    } else if(root->right == NULL){
-        return root->data;
-    } else{
-        return FindMaximum(root->right);
-    }
+        printf("Entrou aqui");
+        int left = FindHeight(root->left );
+        printf("left: %d", left);
+        //return left->data;
+      //  int right = FindHeight(root->right);
+    }//
 }
 
 struct Node* Insert(struct Node* root, int data){
-    if(root == NULL){
-        root = GetNewNode(data);
-    } else if(data <= root->data) {
-        root->left = Insert(root->left, data);
+    
+    if(data <= root->data) {
+        if(root->left == NULL){
+            root->left = GetNewNode(data);
+        } else{
+            root->left = Insert(root->left, data);
+        }
     } else {
-        root->right = Insert(root->right, data);
+        if(root->right == NULL){
+            root->right = GetNewNode(data);
+        } else{
+            root->right = Insert(root->right, data);
+        }
     }
     return root;
 }
@@ -55,7 +52,7 @@ int Search(struct Node* root, int data){
         return 1;
     }else if(data <= root->data){
         return Search(root->left, data);
-    } else{
+    } else if(data >= root->data){
         return Search(root->right, data);
     }
 }
@@ -66,7 +63,7 @@ int Search(struct Node* root, int data){
 
 int main(void){
     struct Node* root;
-    root = NULL;
+    root = GetNewNode(10);
     root = Insert(root, 15);
     root = Insert(root, 5);
     root = Insert(root, 1);
@@ -82,8 +79,5 @@ int main(void){
     } else{
         printf("Value not found.\n");
     }
-    int max = FindMaximum(root);
-    printf("Max = %d\n", max);
-    int min = FindMinimum(root);
-    printf("Min = %d\n", min);
+
 }
