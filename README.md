@@ -18,6 +18,7 @@
 * [Stack - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DataStructures/Stack)
 * [Queue - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DataStructures/Queue)
 * [Tree - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DataStructures/Tree)
+* [Graph - C]
 
 ## Other algorithms
 
