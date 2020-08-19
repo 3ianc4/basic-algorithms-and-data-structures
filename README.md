@@ -19,6 +19,8 @@
 * [Queue - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DataStructures/Queue)
 * [Tree - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DataStructures/Tree)
 * [Graph - C]
+* [Union find]
+* [Quick find]
 
 ## Other algorithms
 
