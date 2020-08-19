@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "Queue.h"
 
 struct Node {
     int data;
@@ -13,18 +14,6 @@ struct Node* GetNewNode(int data){
     NewNode->left = NULL;
     NewNode->right = NULL;
     return NewNode;
-}
-
-int FindHeight(struct Node* root){
-    if(root = NULL){
-        return -1;
-    } else{
-        printf("Entrou aqui");
-        int left = FindHeight(root->left );
-        printf("left: %d", left);
-        //return left->data;
-      //  int right = FindHeight(root->right);
-    }//
 }
 
 struct Node* Insert(struct Node* root, int data){
@@ -47,9 +36,9 @@ struct Node* Insert(struct Node* root, int data){
 
 int Search(struct Node* root, int data){
     if(root == NULL){
-        return 0;
+        printf("Value [%d] not found.\n", data);
     }else if(root->data == data){
-        return 1;
+        printf("Value [%d] found.\n", data);
     }else if(data <= root->data){
         return Search(root->left, data);
     } else if(data >= root->data){
@@ -57,9 +46,27 @@ int Search(struct Node* root, int data){
     }
 }
 
-//void delete(){
-//
-//}
+void PreorderTraversal(struct Node* root){
+    if(root == NULL) return;
+    printf("[%d]", root->data);
+    PreorderTraversal(root->left);
+    PreorderTraversal(root->right);
+}
+
+void InorderTraversal(struct Node* root){
+    if(root == NULL) return;
+    PreorderTraversal(root->left);
+    printf("[%d]", root->data);
+    PreorderTraversal(root->right);
+}
+
+void PostorderTraversal(struct Node* root){
+    if(root == NULL) return;
+    PreorderTraversal(root->left);
+    PreorderTraversal(root->right);
+    printf("[%d]", root->data);
+}
+
 
 int main(void){
     struct Node* root;
@@ -68,16 +75,18 @@ int main(void){
     root = Insert(root, 5);
     root = Insert(root, 1);
     root = Insert(root, 25);
-    root = Insert(root, 32);
+    root = Insert(root, 14);
     root = Insert(root, 11);
+    root = Insert(root, 9);
 
-    int n;
-    printf("Enter number: \n");
-    scanf("%d",&n);
-    if(Search(root, n) == 1) {
-        printf("Value found.\n");
-    } else{
-        printf("Value not found.\n");
-    }
+    Search(root, 1);
+    Search(root, 23);
+
+    PreorderTraversal(root);
+    printf("\n");
+    InorderTraversal(root);
+    printf("\n");
+    PostorderTraversal(root);
+    printf("\n");
 
 }
