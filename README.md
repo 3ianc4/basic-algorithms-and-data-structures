@@ -3,7 +3,7 @@
 ## Sorting algorithms
 
 * [Selection sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/selection_sort.rb)
-* [Insertion sort - Ruby](hhttps://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/insertion_sort.rb)
+* [Insertion sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/insertion_sort.rb)
 * [Merge sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/merge_sort.rb)
 * [Quick sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/quick_sort.rb)
 
