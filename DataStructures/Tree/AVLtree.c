@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Queue.h"
 
 struct Node {
 
@@ -150,8 +149,23 @@ void postorderTraversal(struct Node* root){
     printf("[%d]", root->data);
 }
 
-//void LevelOrderTraversal(struct Node* root){
-//}
+void LevelOrderTraversal(struct Node* root, int level){
+
+    if(level == 0){
+        printf("[%d]", root->data);
+    } 
+    else{ 
+        LevelOrderTraversal(root->left, level-1);
+        LevelOrderTraversal(root->right, level-1);
+    }
+}
+
+void printLevelOrder(struct Node* root){
+    int h = height(root);
+    for(int i = 0; i < h; i++){
+        LevelOrderTraversal(root, i);
+    }
+}
 
 //void delete(){
 //
@@ -180,6 +194,9 @@ int main(void){
 
     printf("\n Postorder: ");
     postorderTraversal(root);
+
+    printf("\n Levelorder: ");
+    printLevelOrder(root);
 
     return 0;
 
