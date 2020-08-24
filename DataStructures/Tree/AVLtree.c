@@ -151,6 +151,9 @@ void postorderTraversal(struct Node* root){
 
 void LevelOrderTraversal(struct Node* root, int level){
 
+    if(root == NULL){
+        return;
+    }
     if(level == 0){
         printf("[%d]", root->data);
     } 
@@ -167,9 +170,47 @@ void printLevelOrder(struct Node* root){
     }
 }
 
-//void delete(){
-//
-//}
+struct Node* findMin(struct Node* root){
+    while(root->left != NULL){
+        root = root->left;
+    }
+    return root;
+}
+
+struct Node* delete(struct Node* root, int data){
+    if(root == NULL){
+        return root;
+    }
+    else if(data < root->data){ // search for given element - try to use search function after
+        root->left = delete(root->left, data);
+    }
+    else if(data > root->data){
+        root->right = delete(root->right, data);
+    }
+    else{ // when found
+        if(root->left == NULL && root->right == NULL){
+            free(root);
+            root = NULL;
+        }
+        else if(root->left == NULL){
+            struct Node* temp = root;
+            root = root->right;
+            free(temp);
+        }
+        else if(root->right == NULL){
+            struct Node* temp = root;
+            root = root->left;
+            free(temp);
+        }
+        else{
+            struct Node* temp = findMin(root->right);
+            root->data = temp->data;
+            root->right = delete(root->right, temp->data);            
+        }
+        return root;
+    }
+    return root;
+}
 
 
 int main(void){
@@ -192,6 +233,18 @@ int main(void){
     printf("\n Inorder: ");
     inorderTraversal(root);
 
+    printf("\n Postorder: ");
+    postorderTraversal(root);
+
+    printf("\n Levelorder: ");
+    printLevelOrder(root);
+
+    delete(root, 7);
+
+    printf("\n Postorder: ");
+    postorderTraversal(root);
+
+    delete(root, 6);
     printf("\n Postorder: ");
     postorderTraversal(root);
 
