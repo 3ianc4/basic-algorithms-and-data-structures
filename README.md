@@ -2,14 +2,14 @@
 
 ## Sorting algorithms
 
-* [Selection sort - Ruby](https://github.com/biancaguzenski/basic-algorithms/blob/master/selection_sort.rb)
-* [Insertion sort - Ruby](https://github.com/biancaguzenski/basic-algorithms/blob/master/insertion_sort.rb)
-* [Merge sort - Ruby](https://github.com/biancaguzenski/basic-algorithms/blob/master/merge_sort.rb)
-* [Quick sort - Ruby](https://github.com/biancaguzenski/basic-algorithms/blob/master/quick_sort.rb)
+* [Selection sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/selection_sort.rb)
+* [Insertion sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/insertion_sort.rb)
+* [Merge sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/merge_sort.rb)
+* [Quick sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/quick_sort.rb)
 
 ## Searching algorithms
 
-* [Binary search - Ruby](https://github.com/biancaguzenski/basic-algorithms/blob/master/binary_search.rb)
+* [Binary search - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Searching/binary_search.rb)
 
 ## Data Structures
 
@@ -24,5 +24,5 @@
 
 ## Other algorithms
 
-* [Palindromes - Ruby](https://github.com/biancaguzenski/basic-algorithms/blob/master/is_palindrome.rb)
-* [Recursive - Palindromes - Ruby ](https://github.com/biancaguzenski/basic-algorithms/blob/master/is_palindrome_recursive.rb)
+* [Palindromes - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Others/is_palindrome.rb)
+* [Recursive - Palindromes - Ruby ](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Others/is_palindrome_recursive.rb)
