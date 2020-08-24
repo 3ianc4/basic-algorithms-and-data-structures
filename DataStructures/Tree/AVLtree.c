@@ -42,7 +42,6 @@ struct Node* rightRotate(struct Node* n){
 
     n->height = max(height(n->left), height(n->right))+1;
     x->height = max(height(x->left), height(x->right))+1;
-
     return x;
 }
 
@@ -112,10 +111,10 @@ struct Node* insert(struct Node* root, int data){
 int search(struct Node* root, int data){
     
     if(root == NULL){
-        printf("Value [%d] not found.\n", data);
+        printf(" Value [%d] not found.\n", data);
     }
     else if(root->data == data){
-        printf("Value [%d] found.\n", data);
+        printf(" Value [%d] found.\n", data);
     }
     else if(data <= root->data){
         return search(root->left, data);
@@ -171,44 +170,70 @@ void printLevelOrder(struct Node* root){
 }
 
 struct Node* findMin(struct Node* root){
-    while(root->left != NULL){
-        root = root->left;
+    struct Node* current = root;
+    while(current->left != NULL){
+        current = current->left;
     }
-    return root;
+    return current;
 }
 
+
 struct Node* delete(struct Node* root, int data){
+
     if(root == NULL){
         return root;
     }
-    else if(data < root->data){ // search for given element - try to use search function after
+    if(data < root->data) {
         root->left = delete(root->left, data);
-    }
+    } 
     else if(data > root->data){
         root->right = delete(root->right, data);
     }
-    else{ // when found
-        if(root->left == NULL && root->right == NULL){
-            free(root);
-            root = NULL;
-        }
-        else if(root->left == NULL){
-            struct Node* temp = root;
-            root = root->right;
-            free(temp);
-        }
-        else if(root->right == NULL){
-            struct Node* temp = root;
-            root = root->left;
-            free(temp);
+    else{
+        if( (root->left == NULL) || (root->right == NULL) ){
+            struct Node* temp = root->left ? root->left : root->right;
+            
+            if(temp == NULL){
+                temp = root;
+                root = NULL;
+            } else{
+                *root = *temp;
+                free(temp);
+            }
         }
         else{
             struct Node* temp = findMin(root->right);
             root->data = temp->data;
-            root->right = delete(root->right, temp->data);            
+            root->right = delete(root->right, temp->data);
         }
+    }
+
+    if(root == NULL){
         return root;
     }
+
+    root->height = 1 + max(height(root->left), height(root->right));
+
+    int balance = getBalance(root);
+
+    if(balance > 1 && (getBalance(root->left) >= 0)) { // left left case
+        return rightRotate(root);
+    }
+
+    if(balance > 1 && (getBalance(root->left) < 0)) { // left right case
+        root->left = leftRotate(root->left);
+        return rightRotate(root);
+    }
+
+    if(balance < -1 && (getBalance(root->right) <= 0)) { // right right case
+        return leftRotate(root);
+    }
+
+    if(balance < -1 && (getBalance(root->right) > 0)) { // right left case
+        root->right = rightRotate(root->right);
+        return leftRotate(root);
+    }
+    
     return root;
 }
 
@@ -239,14 +264,17 @@ int main(void){
     printf("\n Levelorder: ");
     printLevelOrder(root);
 
-    delete(root, 7);
+    root = delete(root, 7);
 
-    printf("\n Postorder: ");
-    postorderTraversal(root);
+    printf("\n Levelorder: ");
+    printLevelOrder(root);
 
-    delete(root, 6);
-    printf("\n Postorder: ");
-    postorderTraversal(root);
+    root = delete(root, 6);
+
+    printf("\n Levelorder: ");
+    printLevelOrder(root);
+
+    root = delete(root, 5);
 
     printf("\n Levelorder: ");
     printLevelOrder(root);
