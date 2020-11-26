@@ -10,6 +10,8 @@
 ## Searching algorithms
 
 * [Binary search - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Searching/binary_search.rb)
+* [Linear Search - C](/Searching/LinearSearch.c)
+* [Recursive linear search - C](/Searching/LinearSearchRecursive.c)
 
 ## Data Structures
 
