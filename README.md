@@ -1,19 +1,19 @@
-# This repository contains some algorithms and data structures built with ruby and C.
+## This repository contains some algorithms and data structures built with ruby and C.
 
-## Sorting algorithms
+### Sorting algorithms
 
-* [Selection sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/selection_sort.rb)
-* [Insertion sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/insertion_sort.rb)
-* [Merge sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/merge_sort.rb)
-* [Quick sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/quick_sort.rb)
+* [Selection Sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/selection_sort.rb)
+* [Insertion Sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/insertion_sort.rb)
+* [Merge Sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/merge_sort.rb)
+* [Quick Sort - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Sorting/quick_sort.rb)
 
-## Searching algorithms
+### Searching algorithms
 
-* [Binary search - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Searching/binary_search.rb)
+* [Binary Search - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Searching/binary_search.rb)
 * [Linear Search - C](/Searching/LinearSearch.c)
-* [Recursive linear search - C](/Searching/LinearSearchRecursive.c)
+* [Recursive Linear Rearch - C](/Searching/LinearSearchRecursive.c)
 
-## Data Structures
+### Data Structures
 
 * [Linked List - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DataStructures/LinkedList)
 * [Doubly Linked list - C](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/tree/master/DataStructures/DoublyLinkedList)
@@ -24,7 +24,7 @@
 * [Union find]
 * [Quick find]
 
-## Other algorithms
+### Other algorithms
 
 * [Palindromes - Ruby](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Others/is_palindrome.rb)
 * [Recursive - Palindromes - Ruby ](https://github.com/biancaguzenski/basic-algorithms-and-data-structures/blob/master/Others/is_palindrome_recursive.rb)
